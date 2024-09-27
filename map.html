@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Column Layout</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/styles.css"> <!-- Link to external CSS -->
+<link rel="stylesheet" href="CSS/styles2.css"> <!-- Link to external CSS -->
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+
+
+    <div class="column column-30">
+        <!-- Content for the 30% column -->
+        <h2 class="column-30-title">متاحف المملكة العربية السعودية</h2>
+        <div class="mini-title">
+            <p class="mini-title-in">انواع المتاحف </p>
+        </div> 
+        <img src="chart.png">
+        <div class="mini-title">
+            <p class="mini-title-in">عدد الزوار</p>
+        </div>
+        <img src="chart2.png">
+        <div class="mini-title">
+            <p class="mini-title-in">عدد المتاحف</p>
+        </div>
+        <img src="chart3.png">
+        <div class="signture">
+            <p class="signture-in">Designed by ASMA </p>
+        </div>
+    </div>
+
+
+    <div class="column column-70">
+        <!-- Content for the 70% column -->
+        <img src="map.png" alt="Map Image">
+        <div class="icon-riyadh">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupriyadh()">
+        </div>
+        <div class="popupriyadh" id="popupriyadh">
+            <span class="close-btn" onclick="togglePopupriyadh()">X</span>
+            <p class="popup-txt">المتحف الوطني السعودي</p>
+            <p class="popup-desc">مركز الملك عبد العزيز التاريخي هو مركز ثقافي تاريخي، مقره في العاصمة الرياض بالمملكة العربية السعودية، تأسس في الخامس من شهر شوال عام 1419ه</p>
+            <p class="popup-desc">يقع المتحف الوطني في الجانب الشرقي من مركز الملك عبد العزيز التاريخي, بحي المربع بمدينة الرياض بجوار قصر الملك عبدالعزيز (المربع) </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14505.209100172118!2d46.7102311!3d24.6477217!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0455e175c5e1%3A0xfa7d1c7f096df805!2sThe%20National%20Museum!5e0!3m2!1sen!2ssa!4v1727356183076!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/riyadh1.jpg" alt="Image 1" onclick="openModal('images/riyadh1.jpg')">
+                <img src="images/riyadh2.jpg" alt="Image 2" onclick="openModal('images/riyadh2.jpg')">
+                <img src="images/riyadh3.jpg" alt="Image 3" onclick="openModal('images/riyadh3.jpg')">
+                <img src="images/riyadh4.jpg" alt="Image 4" onclick="openModal('images/riyadh4.jpg')">
+                <img src="images/riyadh5.jpg" alt="Image 5" onclick="openModal('images/riyadh5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPageriyadh()">اقرأ المزيد</button>
+        </div>
+
+
+        <div class="icon-mecca">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupmecca()">
+        </div>
+        <div class="popupmecca" id="popupmecca">
+            <span class="close-btn" onclick="togglePopupmecca()">X</span>
+            <p class="popup-txt">متحف الحرمين الشريفين	</p>
+            <p class="popup-desc">متحف الحرمين الشريفين أحد متاحف منطقة مكة المكرمة ويتبع الرئاسة العامة لشؤون المسجد الحرام والمسجد النبوي تأسس في عام 1999 وهو معرض يعنى بالحرمين الشريفين والتطور الذي شهدته عمارتهما على مدى العصور ويتكون المعرض من سبع قاعات تشتمل على مجسمين للحرمين الشريفين وعدد من المقتنيات المختلفة من مخطوطات ونقوش كتابية وقطع أثرية ثمينة ومجسمات معمارية وصور فوتوغرافية نادرة  </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.884560864153!2d39.75178607509258!3d21.43378198031884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c21bc0bb5d791d%3A0xbf830e686c9c262e!2sExhibition%20Of%20The%20Two%20Holy%20Mosques%20Architecture!5e0!3m2!1sen!2ssa!4v1727359399963!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/mecca1.JPG" alt="Image 1" onclick="openModal('images/mecca1.jpg')">
+                <img src="images/mecca2.JPG" alt="Image 2" onclick="openModal('images/mecca2.jpg')">
+                <img src="images/mecca3.JPG" alt="Image 3" onclick="openModal('images/mecca3.jpg')">
+                <img src="images/mecca4.JPG" alt="Image 4" onclick="openModal('images/mecca4.jpg')">
+                <img src="images/mecca5.JPG" alt="Image 5" onclick="openModal('images/mecca5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagemecca()">اقرأ المزيد</button>
+        </div>
+
+
+        <div class="icon-madina">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupmadina()">
+        </div>
+        <div class="popupmadina" id="popupmadina">
+            <span class="close-btn" onclick="togglePopupmadina()">X</span>
+            <p class="popup-txt">متحف دار المدينة</p>
+            <p class="popup-desc"> أول وأكبر متحف متخصص في تاريخ المدينة المنورة وتراثها العمراني والحضاري . يضيء المتحف صفحات ناصعة من تاريخ المدينة المنورة على صاحبها أفضل الصلاة والسلام , ويكشف معالم إرثها وحضارتها الإسلامية وعبق تاريخها المجيد . يهدف المتحف الى اثراء المعرفة في العلوم والأبحاث المتخصصة في تاريخ المدينة المنورة ويتميز باستعراضه لمجموعة كبيرة من المقتنيات والمجسمات التي تنقل صورة حية عن معالم تاريخ المدينة المنورة بالاضافة الى مجموعة ضخمة من الصور النادرة لتاريخ المدينة المنورة.</p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.2686908585592!2d39.68550598074458!3d24.476145455889146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bd95ce0ebf7e81%3A0x8cc71c20e7cd1913!2sDar%20Al%20Madinah%20Museum!5e0!3m2!1sen!2ssa!4v1727360010020!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/madina1.JPG" alt="Image 1" onclick="openModal('images/madina1.jpg')">
+                <img src="images/madina2.JPG" alt="Image 2" onclick="openModal('images/madina2.jpg')">
+                <img src="images/madina3.JPG" alt="Image 3" onclick="openModal('images/madina3.jpg')">
+                <img src="images/madina4.JPG" alt="Image 4" onclick="openModal('images/madina4.jpg')">
+                <img src="images/madina5.JPG" alt="Image 5" onclick="openModal('images/madina5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagemadina()">اقرأ المزيد</button>
+        </div>
+
+
+        <div class="icon-tabuk">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopuptabuk()">
+        </div>
+        <div class="popuptabuk" id="popuptabuk">
+            <span class="close-btn" onclick="togglePopuptabuk()">X</span>
+            <p class="popup-txt">متحف قلعة تبوك الاثرية</p>
+            <p class="popup-desc">تقف قلعة تبوك شامخة كأحد أهم المعالم والشواهد التاريخية بالمنطقة؛ لارتباط مكانها بالموقع الذي أقام فيه رسولنا الكريم -صلى الله عليه وسلم- أثناء غزوة تبوك.  وتعد القلعة الأثرية إحدى محطات طريق الحج الشامي الذي يربط بين الشام والمدينة المنورة، حيث يتكون من قلاع ومحطات تبدأ من حدود المملكة الأردنية حتى المدينة المنورة، ويعود تاريخ بنائها إلى عام ٩٧٦هـ، ثم أُعيد ترميمها في عام ١٠٦٤هـ، وفي عام ١٢٥٩ه            </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.203878864703!2d36.55391002532596!3d28.382909475801966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a9ac526a0e248f%3A0x49f46fcbc7b4d027!2z2YXYqtit2YEg2YLZhNi52Kkg2KrYqNmI2YMg2KfZhNin2KvYsdmK2Kk!5e0!3m2!1sen!2ssa!4v1727361208943!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/tabuk1.JPG" alt="Image 1" onclick="openModal('images/tabuk1.jpg')">
+                <img src="images/tabuk2.JPG" alt="Image 2" onclick="openModal('images/tabuk2.jpg')">
+                <img src="images/tabuk3.JPG" alt="Image 3" onclick="openModal('images/tabuk3.jpg')">
+                <img src="images/tabuk4.JPG" alt="Image 4" onclick="openModal('images/tabuk4.jpg')">
+                <img src="images/tabuk5.JPG" alt="Image 5" onclick="openModal('images/tabuk5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagetabuk()">اقرأ المزيد</button>
+        </div>
+
+
+        <div class="icon-baha">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupbaha()">
+        </div>
+        <div class="popupbaha" id="popupbaha">
+            <span class="close-btn" onclick="togglePopupbaha()">X</span>
+            <p class="popup-txt">متحف الباحة الاقليمي  	</p>
+            <p class="popup-desc">على مساحة 9,000 متر مربع، بجوار قرية رغدان السياحية، شُيّد متحف الباحة الإقليمي للآثار والتراث بطراز معماري حديث، من 4 طوابق، و8 قاعات، ليمنح ضيوفه فرصة لمتابعة فصول من تاريخ الباحة والمنطقة. ستنطلق من صالة المدخل، لتتجول في جناح ما قبل الإسلام، ثم تنتقل لجناح ما قبل التاريخ، وتعرج إلى جناح الباحة، لتملأ ناظريك بقطع أثرية تعود للتاريخ الإسلامي.            </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.6122359480937!2d41.44135167505281!3d20.024782881385104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15ef4587b6684ca5%3A0xc2d2702c6564271c!2sAl%20Baha%20Museum!5e0!3m2!1sen!2ssa!4v1727360745831!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/baha1.JPG" alt="Image 1" onclick="openModal('images/baha1.jpg')">
+                <img src="images/baha2.JPG" alt="Image 2" onclick="openModal('images/baha2.jpg')">
+                <img src="images/baha3.JPG" alt="Image 3" onclick="openModal('images/baha3.jpg')">
+                <img src="images/baha4.JPG" alt="Image 4" onclick="openModal('images/baha4.jpg')">
+                <img src="images/baha5.JPG" alt="Image 5" onclick="openModal('images/baha5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagebaha()">اقرأ المزيد</button>
+        </div>
+
+
+
+
+        <div class="icon-jauf">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupjauf()">
+        </div>
+        <div class="popupjauf" id="popupjauf">
+            <span class="close-btn" onclick="togglePopupjauf()">X</span>
+            <p class="popup-txt">متحف الجوف 	</p>
+            <p class="popup-desc">من المتاحف الأثرية التي تأسست في المملكة العربية السعودية هو متحف الجوف. يقع في ذات المنطقة التي تضم جامع عمر بن الخطاب وقلعة مارد في واحدة من أشهر المدن الأثرية. أخذ تصميم المتحف بعين الاعتبار الهوية الأثرية والتراثية لمنطقة الجوف. يتكون المتحف من مبنى حديث مكون من طابق واحد، تبلغ مساحته حوالي ٣٦٠٠ متر مربع، ويقع وسط مدينة دومة الجندل. إنه يضم العديد من الآثار والمجموعات التراثية التي توضح جوانب حضارة الجوف.            </p> </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.883247940653!2d39.864458175381436!3d29.80991717504254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150d2e5792f96c95%3A0xfd277e4518ed9408!2sJouf%20Regional%20Museum!5e0!3m2!1sen!2ssa!4v1727361726398!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/jauf1.JPG" alt="Image 1" onclick="openModal('images/jauf1.jpg')">
+                <img src="images/jauf2.JPG" alt="Image 2" onclick="openModal('images/jauf2.jpg')">
+                <img src="images/jauf3.JPG" alt="Image 3" onclick="openModal('images/jauf3.jpg')">
+                <img src="images/jauf4.JPG" alt="Image 4" onclick="openModal('images/jauf4.jpg')">
+                <img src="images/jauf5.JPG" alt="Image 5" onclick="openModal('images/jauf5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagejauf()">اقرأ المزيد</button>
+        </div>
+
+
+
+
+        <div class="icon-nb">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupnb()">
+        </div>
+        <div class="popupnb" id="popupnb">
+            <span class="close-btn" onclick="togglePopupnb()">X</span>
+            <p class="popup-txt">متحف الحدود الشمالية 	</p>
+            <p class="popup-desc"> متحف الحدود الشمالية أحد متاحف منطقة الحدود الشمالية في السعودية، تم انشائه في 1428 هـ 2007 لحفظ وتوثيق آثار وتراث منطقة الحدود الشمالية من المملكة العربية السعودية، يتبع وزارة السياحة. يحتوي المتحف على قاعات العروض المتحفية وقاعة آثار المملكة والتاريخ الطبيعي والجيولوجي التي تشتمل على صور جيولوجية لمنطقة الحدود الشمالية وبيئاتها وأهم مكوناتها فضلا عن أهم المواقع الأثرية المكتشفة مع مختارات من القطع الأثرية .            </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3422.9847618328554!2d41.08487237542611!3d30.915050074496822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x156c11cc4d96a06d%3A0xe123e70d317f963f!2sMuseum%20arar%20-%20northern%20border!5e0!3m2!1sen!2ssa!4v1727362262869!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/nb1.JPG" alt="Image 1" onclick="openModal('images/nb1.jpg')">
+                <img src="images/nb2.JPG" alt="Image 2" onclick="openModal('images/nb2.jpg')">
+                <img src="images/nb3.JPG" alt="Image 3" onclick="openModal('images/nb3.jpg')">
+                <img src="images/nb4.JPG" alt="Image 4" onclick="openModal('images/nb4.jpg')">
+                <img src="images/nb5.JPG" alt="Image 5" onclick="openModal('images/nb5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagenb()">اقرأ المزيد</button>
+        </div>
+
+        
+        <div class="icon-dammam">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupdammam()">
+        </div>
+        <div class="popupdammam" id="popupdammam">
+            <span class="close-btn" onclick="togglePopupdammam()">X</span>
+            <p class="popup-txt">متحف المنطقة الشرقية الإقليمي - الدمام  	</p>
+            <p class="popup-desc"> متحف الدمام الإقليمي، وهو متحف في مدينة الدمام المنطقة الشرقية في السعودية مملوك لهيئة المتاحف السعودية. يتكون عناصر مبنى المتحف من 7 قاعات، قاعة العروض الزائرة وقاعات الفصول الدراسية، وقسم الترميم للقطع الأثرية، والمكتبة ومكاتب الباحثين، ومنطقة الخدمات كما أن المتحف يحتوي على قاعة المعروضات الخارجية المسقوفة بمسطح 2700 م2 وتتكون من صالات العرض الخارجي، وقاعات العرض (شكل حلزوني) بمسطح 3900م2 وتتكون من قاعة بيئة المنطقة ما قبل التاريخ وفترة ما قبل الإسلام والفترة الإسلامية، وقاعة التراث، وقاعة التاريخ الحديث، وقاعة عرض توحيد المملكة.            </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.1117611099385!2d50.115237475256215!3d26.484346176905046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49f9e9e2bc373b%3A0x8bbc0b6a9d3247c2!2sDammam%20Regional%20Museum!5e0!3m2!1sen!2ssa!4v1727362631475!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/dammam1.JPG" alt="Image 1" onclick="openModal('images/dammam1.jpg')">
+                <img src="images/dammam2.JPG" alt="Image 2" onclick="openModal('images/dammam2.jpg')">
+                <img src="images/dammam3.JPG" alt="Image 3" onclick="openModal('images/dammam3.jpg')">
+                <img src="images/dammam4.JPG" alt="Image 4" onclick="openModal('images/dammam4.jpg')">
+                <img src="images/dammam5.JPG" alt="Image 5" onclick="openModal('images/dammam5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagedammam()">اقرأ المزيد</button>
+        </div>
+
+
+
+        <div class="icon-jazan">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupjazan()">
+        </div>
+        <div class="popupjazan" id="popupjazan">
+            <span class="close-btn" onclick="togglePopupjazan()">X</span>
+            <p class="popup-txt">متحف جازان  	</p>
+            <p class="popup-desc"> متحف آثار جازان، هو متحف بمدينة صبيا الواقعة بمنطقة جازان، يقع بجوار موقع الأدارسة الأثري، ويشكل جزءاً من شبكة المتاحف التي أقامتها وكالة الآثار والمتاحف بوزارة المعارف، وتم بناء المتحف عام 1403 هـ الموافق 1983 م، وافتتح المتحف لاستقبال الزوار في 27 محرم 1412 هـ. تحتوي على لوحات لخرائط توضح المواقع الأثرية بمنطقة جازان وصور فوتوغرافية قديمة وأدوات العصر الحجري الأثرية مثل الفؤوس والمكاشط ورؤوس السهام ونماذج للأواني الفخارية وحلي والعملات القديمة، وكذلك لوحات خاصة بالكتابات والخطوط واللغات القديمة.            </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3812.1413622228497!2d42.64492507497994!3d17.163333283686114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fd5197b41c47dd%3A0x7b2c10bf85c19e71!2sJizan%20Museum!5e0!3m2!1sen!2ssa!4v1727363089971!5m2!1sen!2ssa" width="100%" height="100"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/jazan1.JPG" alt="Image 1" onclick="openModal('images/jazan1.jpg')">
+                <img src="images/jazan2.JPG" alt="Image 2" onclick="openModal('images/jazan2.jpg')">
+                <img src="images/jazan3.JPG" alt="Image 3" onclick="openModal('images/jazan3.jpg')">
+                <img src="images/jazan4.JPG" alt="Image 4" onclick="openModal('images/jazan4.jpg')">
+                <img src="images/jazan5.JPG" alt="Image 5" onclick="openModal('images/jazan5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagejazan()">اقرأ المزيد</button>
+        </div>
+
+        <div class="icon-qassim">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupqassim()">
+        </div>
+        <div class="popupqassim" id="popupqassim">
+            <span class="close-btn" onclick="togglePopupqassim()">X</span>
+            <p class="popup-txt">متحف القصيم الإقليمي    </p>
+            <p class="popup-desc">يقع متحف القصيم الإقليمي في مدينة بريدة العاصمة الإدارية للمنطقة ويتميز موقع المشروع كونه يقع في احد أهم أحياء مدينة بريدة، فهو يقع على طريق أبو بكر الصديق أحد الطرق الرئيسية المهمة في المدينة والتي تربط بين وسط وشمال مدينة بريدة، ويقع المتحف بجوار مدينة الملك عبدالله الرياضية، وبالقرب من العديد من المباني الحكومية مثل المحكمة العامة والمديرية العامة للدوريات الأمنية وفرع الغرفة التجارية وفرع هيئة الرقابة ومكافحة الفساد وفرع وزارة العمل والتنمية الاجتماعية وغيرها.            </p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.369123222951!2d43.941338475252444!3d26.37925977696924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x157f59d61916153b%3A0x9bda84a1d4ff8d8e!2sAl%20Qassem%20Regional%20Museum!5e0!3m2!1sen!2ssa!4v1727364391648!5m2!1sen!2ssa"  width="100%" height="100"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/qassim1.JPG" alt="Image 1" onclick="openModal('images/qassim1.jpg')">
+                <img src="images/qassim2.JPG" alt="Image 2" onclick="openModal('images/qassim2.jpg')">
+                <img src="images/qassim3.JPG" alt="Image 3" onclick="openModal('images/qassim3.jpg')">
+                <img src="images/qassim4.JPG" alt="Image 4" onclick="openModal('images/qassim4.jpg')">
+                <img src="images/qassim5.JPG" alt="Image 5" onclick="openModal('images/qassim5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPageqassim()">اقرأ المزيد</button>
+        </div>
+
+        <div class="icon-hail">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopuphail()">
+        </div>
+        <div class="popuphail" id="popuphail">
+            <span class="close-btn" onclick="togglePopuphail()">X</span>
+            <p class="popup-txt">متحف حائل الإقليمي    </p>
+            <p class="popup-desc">متحف حائل يروي لزواره تاريخ حقبة زمنية مرت بها الجزيرة العربية بشكل عام و«عروس الشمال» على وجه الخصوص منذ ما قبل التاريخ، مروراً ببدايات الإسلام وصولاً إلى المرحلة الحالية، وهو ما جعله واحداً من أهم المشاريع الثقافية على مستوى المنطقة. يقع المتحف في مدينة حائل مجاور لمركز الأمير سلطان الحضاري بحائل، على مساحة إجمالية تقدر 11.000 متر مربع. تم افتتاح المتحف في عام 2004م بعد عمليات التجديد. صُمم المتحف بشكل فريد مستوحى من عمارة حائل</p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.7437864032436!2d41.69527777529226!3d27.477234826315268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x157639004f6611c7%3A0x6905068619cfed!2z2YXYqtit2YEg2K3Yp9im2YQg2KfZhNil2YLZhNmK2YXZiiAtIEhhaWwgUmVnaW9uYWwgTXVzZXVt!5e0!3m2!1sen!2ssa!4v1727365155676!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/hail1.JPG" alt="Image 1" onclick="openModal('images/hail1.jpg')">
+                <img src="images/hail2.JPG" alt="Image 2" onclick="openModal('images/hail2.jpg')">
+                <img src="images/hail3.JPG" alt="Image 3" onclick="openModal('images/hail3.jpg')">
+                <img src="images/hail4.JPG" alt="Image 4" onclick="openModal('images/hail4.jpg')">
+                <img src="images/hail5.JPG" alt="Image 5" onclick="openModal('images/hail5.jpg')">
+            </div>
+            <button class="popup-btn" onclick="openPagehail()">اقرأ المزيد</button>
+        </div>
+
+        <div class="icon-najran">
+            <img src="icon.png" alt="Icon Image" onclick="togglePopupnajran()">
+        </div>
+        <div class="popupnajran" id="popupnajran">
+            <span class="close-btn" onclick="togglePopupnajran()">X</span>
+            <p class="popup-txt">متحف نجران الإقليمي    </p>
+            <p class="popup-desc"> متحف نجران، أحد متاحف منطقة نجران، وتم بناء المتحف عام 1403 هـ 1983 بالقرب من موقع الأخدود الأثري بنجران على أرض مساحتها 482232 متر مربع وافتتح لاستقبال الزوار عام 1407هـ 1987م، ويحتوي المتحف على مكاتب مجهزة بأحدث المعدات وهي: مكاتب الإدارة، والموظفين، وقاعة العرض المتحفي ومعامل المساحة والرسم ومعامل التصوير ومعامل الترميم والمختبر وقاعة العرض التلفزيوني والمكتبة تضم مجموعة من الكتب المتخصصة بالإضافة إلى بعض الدوريات والنشرات وقاعة العروض الزائرة.</p>
+            <p class="popup-loc-txt">موقع المتحف</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.60481745664!2d44.1761209!3d17.4786187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fee95537c9193d%3A0x4dc968556be34330!2z2YXYqtit2YEg2YbYrNix2KfZhiDYp9mE2KXZgtmE2YrZhdmK!5e0!3m2!1sen!2ssa!4v1727366098820!5m2!1sen!2ssa" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="popup-loc-txt">صور المتحف</p>
+            <div class="popupimg">
+                <img src="images/najran1.JPG" alt="Image 1" onclick="openModal('images/najran1.jpg')">
+                <img src="images/najran2.JPG" alt="Image 2" onclick="openModal('images/najran2.jpg')">
+                <img src="images/najran3.JPG" alt="Image 3" onclick="openModal('images/najran3.jpg')">
+                <img src="images/najran4.JPG" alt="Image 4" onclick="openModal('images/najran4.jpg')">
+                <img src="images/najran5.JPG" alt="Image 4" onclick="openModal('images/najran5.jpg')">
+
+            </div>
+            <button class="popup-btn" onclick="openPagenajran()">اقرأ المزيد</button>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+    function openModal(imageUrl) {
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById('modalImg');
+        modal.style.display = 'block';
+        modalImg.src = imageUrl;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = 'none';
+    }
+</script>
+
+
+
+
+<script>
+    function togglePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupriyadh() {
+        var popup = document.getElementById("popupriyadh");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupmecca() {
+        var popup = document.getElementById("popupmecca");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupmadina() {
+        var popup = document.getElementById("popupmadina");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupdammam() {
+        var popup = document.getElementById("popupdammam");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupjauf() {
+        var popup = document.getElementById("popupjauf");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopuptabuk() {
+        var popup = document.getElementById("popuptabuk");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupnb() {
+        var popup = document.getElementById("popupnb");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupjazan() {
+        var popup = document.getElementById("popupjazan");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupbaha() {
+        var popup = document.getElementById("popupbaha");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupqassim() {
+        var popup = document.getElementById("popupqassim");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopuphail() {
+        var popup = document.getElementById("popuphail");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+    function togglePopupnajran() {
+        var popup = document.getElementById("popupnajran");
+        popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+    }
+
+
+</script>
+
+<script>
+    function openModal(imageUrl) {
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById('modalImg');
+        modal.style.display = 'block';
+        modalImg.src = imageUrl;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = 'none';
+    }
+</script>
+
+<script>
+    function openPagedammam() {
+        window.open('https://destinationksa.com/ar/%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D8%AF%D9%85%D8%A7%D9%85-%D8%A7%D9%84%D8%A5%D9%82%D9%84%D9%8A%D9%85%D9%8A-%D8%A3%D9%87%D9%85-%D9%82%D8%A7%D8%B9%D8%A7%D8%AA%D9%87/', '_blank');
+    }
+    function openPageriyadh() {
+        window.open('https://www.visitsaudi.com/ar/riyadh/attractions/the-national-museum-of-saudi-arabia', '_blank');
+    }
+    function openPagemecca() {
+        window.open('https://gph.gov.sa/index.php/ar/component/k2/item/6454-2022-02-15-14-22-37/', '_blank');
+    }
+    function openPagemadina() {
+        window.open('https://visitmadinahsa.com/Details/18', '_blank');
+    }
+    function openPagebaha() {
+        window.open('https://www.visitsaudi.com/ar/al-baha/attractions/al-baha-museum', '_blank');
+    }
+    function openPagejazan() {
+        window.open('https://jazanmuseum.com/?page_id=286', '_blank');
+    }
+    function openPagejauf() {
+        window.open('https://www.rougemagz.com/2020/20200110/rl3.htm', '_blank');
+    }
+    function openPagenajran() {
+        window.open('https://www.visitsaudi.com/ar/najran/attractions/najran-museum', '_blank');
+    }
+    function openPagenb() {
+        window.open('https://annahar-news.com/news/single/1516', '_blank');
+    }
+    function openPagetabuk() {
+        window.open('https://tabuksa.com/site/show1/30', '_blank');
+    }
+    function openPagehail() {
+        window.open('https://mytrip.sa/ar/tour/%D9%85%D8%AA%D8%AD%D9%81-%D8%AD%D8%A7%D8%A6%D9%84-%D8%A7%D9%84%D8%A3%D9%82%D9%84%D9%8A%D9%85%D9%8A/', '_blank');
+    }
+    function openPageqassim() {
+        window.open('hhttps://magazine2.bawtaqah.com/?p=2565', '_blank');
+    }
+</script>
+
+</body>
+</html>
