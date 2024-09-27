@@ -1,0 +1,472 @@
+    .container {
+        display: flex;
+    }
+
+    .column {
+        position: relative;
+        padding: 20px;
+    }
+
+    .column-30 {
+        flex: 0 0 30%;
+        background: #f2f2f2;
+    }
+
+    .column-70 {
+        flex: 0 0 70%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../bg.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .column-30-title {
+        font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+        text-align: center;
+    }
+    .icon-riyadh {
+        position: absolute;
+        top: 48%; /* Adjust these values as needed */
+        left: 55%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-mecca {
+        position: absolute;
+        top: 62%; /* Adjust these values as needed */
+        left: 36%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-madina {
+        position: absolute;
+        top: 45%; /* Adjust these values as needed */
+        left: 33%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-tabuk {
+        position: absolute;
+        top: 28%; /* Adjust these values as needed */
+        left: 25%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-baha {
+        position: absolute;
+        top: 70%; /* Adjust these values as needed */
+        left: 39%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-jauf {
+        position: absolute;
+        top: 20%; /* Adjust these values as needed */
+        left: 28%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-nb {
+        position: absolute;
+        top: 10%; /* Adjust these values as needed */
+        left: 33%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-dammam {
+        position: absolute;
+        top: 35%; /* Adjust these values as needed */
+        left: 65%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-jazan {
+        position: absolute;
+        top: 83%; /* Adjust these values as needed */
+        left: 44%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-qassim {
+        position: absolute;
+        top: 38%; /* Adjust these values as needed */
+        left: 48%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-hail {
+        position: absolute;
+        top: 31%; /* Adjust these values as needed */
+        left: 41%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .icon-najran {
+        position: absolute;
+        top: 80%; /* Adjust these values as needed */
+        left: 57%; /* Adjust these values as needed */
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+
+
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .popupriyadh {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }
+
+    .popupmadina {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }
+
+    .popupmecca {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }
+
+    .popuptabuk {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }
+    
+    .popupjauf {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }
+    
+    .popupdammam {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }
+    
+    .popupqassim {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }   
+    .popuphail {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }  
+
+    .popupnajran {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }  
+
+
+
+
+
+    .popupnb {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }   
+    
+    .popupjazan {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }  
+    .popupbaha {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+        max-width: 500px;
+        text-align: center;
+        z-index: 1; /* Ensure icons are below popups */
+
+    }
+
+    .popup-txt {
+        font-size: 18px;
+        font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .popup-desc {
+        margin-bottom: 10px;
+        font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+        font-size: 14px;
+    }
+
+    .popup-loc-txt {
+        font-size: 14px;
+        font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+        margin-bottom: 10px;
+        font-weight: bold;   
+        text-align: right;     
+    }
+
+    .popup-btn {
+        padding: 8px 16px;
+        background-color: #007bff;
+        font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .popupimg {
+        text-align: center; /* Center the images horizontally */
+    }
+
+    .popupimg img {
+        display: inline-block; /* Display images as inline-block elements */
+        margin: 0 3px; /* Add spacing between images */
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Style for the modal */
+    /* Styles for the modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .close {
+        color: white;
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+    text-align: center;
+}
+
+.description {
+    font-size: 16px;
+    color: #444;
+    margin-top: 5px;
+    font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+    text-align: center;
+}
+
+.location {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+    font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+    text-align: center;
+}
+
+.images {
+    margin-top: 10px;
+}
+
+.images img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}

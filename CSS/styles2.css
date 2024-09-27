@@ -1,0 +1,34 @@
+
+        
+.column-30-txt {
+    font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+    text-align: center;
+
+}
+
+.mini-title {
+    font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+    text-align: right;
+    background-color: #21baa6;
+    width: 100%;
+}
+
+.mini-title-in {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.signture {
+    font-family: 'Cairo', sans-serif; /* Modern Arabic font */
+    text-align: right;
+    background-color: #bea063;
+    width: 100%;   
+}
+
+.signture-in {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+
+}
